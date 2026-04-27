@@ -4,26 +4,7 @@ import { Search, MapPin, ChevronDown, Menu, SlidersHorizontal } from 'lucide-rea
 import Link from 'next/link';
 import Image from 'next/image';
 
-const popularFood = [
-  {
-    id: 1,
-    title: 'Hyderabadi Biryani',
-    price: 10.50,
-    rating: 5.0,
-    deliveryTime: '20 min delivery',
-    distance: '2.5 km',
-    imagePlaceholder: 'Hyderabadi Veg Biryani 2.png'
-  },
-  {
-    id: 2,
-    title: 'Bombay Biryani',
-    price: 9.50,
-    rating: 5.0,
-    deliveryTime: '25 min delivery',
-    distance: '3.5 km',
-    imagePlaceholder: 'images (1) 2.png'
-  }
-];
+import { popularFood } from '../data';
 
 const categories = [
   { id: 1, name: 'Biryani', image: 'Hyderabadi Veg Biryani 2.png', active: true },
@@ -33,7 +14,7 @@ const categories = [
 
 export default function HomeDashboard() {
   return (
-    <main className="flex-1 flex flex-col bg-gradient-peach min-h-screen pb-28 relative">
+    <main className="flex-1 flex flex-col bg-gradient-peach h-screen overflow-y-auto pb-28 relative">
       
       {/* Top Header */}
       <header className="px-6 pt-12 pb-6 flex items-center justify-between z-10">
@@ -48,7 +29,11 @@ export default function HomeDashboard() {
         </div>
         
         <button className="w-12 h-12 rounded-full bg-white/50 backdrop-blur-md flex items-center justify-center shadow-sm text-gray-900">
-          <Menu size={24} />
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
       </header>
 
