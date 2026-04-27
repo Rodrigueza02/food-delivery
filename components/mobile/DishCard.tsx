@@ -12,32 +12,46 @@ interface DishCardProps {
   imagePlaceholder: string;
 }
 
-export default function DishCard({ id, title, price, rating, deliveryTime, distance, imagePlaceholder }: DishCardProps) {
+export default function DishCard({ id, title, rating, deliveryTime, distance, imagePlaceholder }: DishCardProps) {
   return (
-    <Link href={`/details/${id}`}>
-      <div className="bg-brand-light/30 rounded-[30px] p-4 relative mt-16 flex flex-col items-center cursor-pointer transition-transform hover:-translate-y-2">
-        {/* Floating Image */}
-        <div className="absolute -top-16 w-36 h-36 rounded-full bg-white shadow-xl flex items-center justify-center overflow-hidden border-4 border-white relative">
-          <Image src={`/images/${imagePlaceholder}`} alt={title} fill className="object-cover" />
+    <Link href={`/details/${id}`} className="block">
+      <div className="bg-[#fce8e6]/60 rounded-[28px] px-3 pb-4 pt-2 relative mt-14 flex flex-col items-center cursor-pointer transition-transform hover:-translate-y-1 active:scale-[0.98]">
+
+        {/* Floating circular image */}
+        <div className="absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full bg-white shadow-xl border-4 border-white overflow-hidden">
+          <Image
+            src={`/images/${imagePlaceholder}`}
+            alt={title}
+            fill
+            className="object-cover"
+            sizes="112px"
+          />
         </div>
 
-        {/* Content spacing to push text down below the floating image */}
-        <div className="mt-20 w-full text-center">
-          <h3 className="font-poppins font-bold text-lg text-gray-900 mb-2 leading-tight px-2">{title}</h3>
-          
-          {/* Rating */}
-          <div className="flex items-center justify-center gap-1 mb-3">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={14} className={i < Math.floor(rating) ? "fill-brand text-brand" : "text-gray-300"} />
-            ))}
-          </div>
+        {/* Spacer for the floating image */}
+        <div className="h-16" />
 
-          {/* Meta info */}
-          <div className="flex items-center justify-center gap-2 text-xs font-semibold text-gray-800">
-            <span>{distance}</span>
-            <span className="text-brand text-xl leading-none -mt-1">•</span>
-            <span>{deliveryTime}</span>
-          </div>
+        {/* Title */}
+        <h3 className="font-poppins font-bold text-sm text-gray-900 mb-2 leading-tight text-center px-1 line-clamp-2">
+          {title}
+        </h3>
+
+        {/* Stars */}
+        <div className="flex items-center justify-center gap-0.5 mb-2">
+          {[...Array(5)].map((_, i) => (
+            <Star
+              key={i}
+              size={12}
+              className={i < Math.floor(rating) ? 'fill-brand text-brand' : 'text-gray-300 fill-gray-200'}
+            />
+          ))}
+        </div>
+
+        {/* Distance & time */}
+        <div className="flex items-center justify-center gap-1.5 text-[11px] font-semibold text-gray-700">
+          <span>{distance}</span>
+          <span className="text-brand text-base leading-none -mt-0.5">•</span>
+          <span>{deliveryTime}</span>
         </div>
       </div>
     </Link>

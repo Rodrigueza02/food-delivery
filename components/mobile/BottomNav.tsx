@@ -10,25 +10,23 @@ export default function BottomNav() {
   ];
 
   return (
-    <div className="fixed bottom-0 w-full max-w-[430px] bg-white px-8 py-5 rounded-t-[40px] shadow-[0_-10px_30px_rgba(0,0,0,0.05)] z-50">
+    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] bg-white px-8 py-4 rounded-t-[36px] shadow-[0_-8px_24px_rgba(0,0,0,0.07)] z-50">
       <div className="flex items-center justify-between">
         {navItems.map((item, index) => {
           const Icon = item.icon;
           return (
-            <Link 
-              key={index} 
+            <Link
+              key={index}
               href={item.href}
-              className={`flex items-center justify-center transition-colors ${
-                item.active ? 'text-white' : 'text-gray-500 hover:text-brand'
-              }`}
+              className="flex items-center justify-center"
             >
-              <div className={`relative p-3 rounded-full ${item.active ? 'bg-brand shadow-hover' : ''}`}>
-                <Icon size={24} className={item.active ? 'text-white' : ''} strokeWidth={2} />
+              <div className={`p-3 rounded-full transition-all ${item.active ? 'bg-brand shadow-hover' : 'text-gray-400 hover:text-brand'}`}>
+                <Icon size={22} className={item.active ? 'text-white' : ''} strokeWidth={2} />
               </div>
             </Link>
           );
         })}
       </div>
-    </div>
+    </nav>
   );
 }

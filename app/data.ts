@@ -9,7 +9,9 @@ export const popularFood = [
     distance: '2.5 km',
     calories: '450 Cal',
     diameter: '15.05 Cm',
+    category: 'biryani',
     imagePlaceholder: 'Hyderabadi Veg Biryani 2.png',
+    imageDetail: 'Hyderabadi Veg Biryani 3.png',
     description: 'Hyderabadi biryani is a culinary masterpiece that tantalizes the senses with its aromatic spices, tender meat, and fragrant basmati rice. originating from the vibrant city of the Hyaderabad in india, this is iconic dish......'
   },
   {
@@ -22,8 +24,10 @@ export const popularFood = [
     distance: '3.5 km',
     calories: '480 Cal',
     diameter: '16.05 Cm',
+    category: 'biryani',
     imagePlaceholder: 'images (1) 2.png',
-    description: 'Bombay biryani is a delicious blend of spices and tender meat that tantalizes the senses with its aromatic spices.'
+    imageDetail: 'images (1) 3.png',
+    description: 'Bombay biryani is a delicious blend of spices and tender meat that tantalizes the senses with its aromatic spices, tender chicken and fragrant basmati rice. originating from the vibrant city of Mumbai in india, this is iconic dish......'
   },
   {
     id: 3,
@@ -35,7 +39,9 @@ export const popularFood = [
     distance: '2.5 km',
     calories: '480 Cal',
     diameter: '18.05 Cm',
-    imagePlaceholder: 'paneer-pizza 2.png',
+    category: 'pizza',
+    imagePlaceholder: 'paneer-pizza 1.png',
+    imageDetail: 'paneer-pizza 2.png',
     description: 'Onion capsicum pizza is a culinary masterpiece that tantalizes the senses with its aromatic spices, tender onion and capsicum and fragrant pizza base. originating from the vibrant city of the Hyaderabad in India, this is iconic dish......'
   },
   {
@@ -48,7 +54,9 @@ export const popularFood = [
     distance: '3.5 km',
     calories: '460 Cal',
     diameter: '12.05 Cm',
-    imagePlaceholder: 'paneer-pizza 1.png',
+    category: 'pizza',
+    imagePlaceholder: 'images (15) 3.png',
+    imageDetail: 'images (15) 4.png',
     description: 'Panner and mater pizza is a culinary masterpiece that tantalizes the senses with its aromatic spices, tender panner,mater and tragrant pizza base. originating from the vibrant city of the Hyaderabad in india, this is iconic dish......'
   },
   {
@@ -61,7 +69,9 @@ export const popularFood = [
     distance: '2.5 km',
     calories: '560 Cal',
     diameter: '6.05 Cm',
+    category: 'burger',
     imagePlaceholder: 'images 2.png',
+    imageDetail: 'images 3.png',
     description: 'Veg burger is a culinary masterpiece that tantalizes the senses with its aromatic spices, tender aalu tiki and tamato,other and tragrant burger base. originating from the vibrant city of the Hyaderabad in india, this is iconic dish......'
   },
   {
@@ -74,7 +84,9 @@ export const popularFood = [
     distance: '3.5 km',
     calories: '460 Cal',
     diameter: '4.00 Cm',
-    imagePlaceholder: 'images 2.png',
+    category: 'burger',
+    imagePlaceholder: 'images (2) 3.png',
+    imageDetail: 'images (2) 4.png',
     description: 'Panner burger is a culinary masterpiece that tantalizes the senses with its aromatic spices, tender panner,aalu tiki and tamato,other and tragrant burger base. originating from the vibrant city of the Hyaderabad in india, this is iconic dish......'
   },
   {
@@ -87,7 +99,9 @@ export const popularFood = [
     distance: '2.5 km',
     calories: '460 Cal',
     diameter: '4.00 Cm',
-    imagePlaceholder: 'veg-sandwich.png',
+    category: 'sandwich',
+    imagePlaceholder: 'download (7) 2.png',
+    imageDetail: 'download (7) 3.png',
     description: 'Veg sandwhic is a culinary masterpiece that tantalizes the senses with its aromatic spices, tender panner,aalu and tamato,other and tragrant burger base. originating from the vibrant city of the Hyaderabad in india, this is iconic dish......'
   },
   {
@@ -100,7 +114,16 @@ export const popularFood = [
     distance: '3.5 km',
     calories: '460 Cal',
     diameter: '4.00 Cm',
-    imagePlaceholder: 'potato-sandwich.png',
+    category: 'sandwich',
+    imagePlaceholder: 'p4851-1671186983639c4a27e5f0e 2.png',
+    imageDetail: 'p4851-1671186983639c4a27e5f0e 3.png',
     description: 'Potato sandwhic is a culinary masterpiece that tantalizes the senses with its aromatic spices, tender panner,aalu and tamato,other and tragrant burger base. originating from the vibrant city of the Hyaderabad in india, this is iconic dish......'
   }
+];
+
+export const categories = [
+  { id: 'biryani', name: 'Biryani', image: 'Hyderabadi Veg Biryani 2.png' },
+  { id: 'pizza', name: 'Pizza', image: 'paneer-pizza 1.png' },
+  { id: 'burger', name: 'Burger', image: 'images 2.png' },
+  { id: 'sandwich', name: 'Sandwich', image: 'download (7) 2.png' },
 ];
